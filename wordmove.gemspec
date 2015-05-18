@@ -2,17 +2,17 @@
 require File.expand_path('../lib/wordmove/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Stefano Verna", "Ju Liu"]
-  gem.email         = ["stefano.verna@welaika.com", "ju.liu@welaika.com"]
+  gem.authors       = ["Stefano Verna", "Ju Liu", 'David Massiani']
+  gem.email         = ["stefano.verna@welaika.com", "ju.liu@welaika.com", "davidmassianirennes@gmail.com"]
   gem.description   = %q{Wordmove deploys your WordPress websites at the speed of light.}
   gem.summary       = %q{Wordmove, Capistrano for Wordpress}
-  gem.homepage      = "https://github.com/welaika/wordmove"
+  gem.homepage      = "https://github.com/dmassiani/wordmove"
   gem.license       = "MIT"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "wordmove"
+  gem.name          = "wordmove-mb4"
   gem.require_paths = ["lib"]
   gem.version       = Wordmove::VERSION
 

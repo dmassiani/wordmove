@@ -14,9 +14,23 @@ module Wordmove
     end
 
     def adapt!
+      mb4!
+      mb4_unicode!
       replace_vhost!
       replace_wordpress_path!
       write_sql!
+    end
+
+    def mb4!
+      source_mb4 = 'utf8mb4'
+      dest_mb4 = 'utf8'
+      replace_field!(source_mb4, dest_mb4)
+    end
+
+    def mb4_unicode!
+      source_unicodemb4 = 'utf8mb4_unicode_ci'
+      dest_unicodemb4 = 'utf8_unicode_ci'
+      replace_field!(source_unicodemb4, dest_unicodemb4)
     end
 
     def replace_vhost!
