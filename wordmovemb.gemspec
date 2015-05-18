@@ -1,20 +1,20 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/wordmovemb4/version', __FILE__)
+require File.expand_path('../lib/wordmovemb/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Stefano Verna", "Ju Liu", 'David Massiani']
   gem.email         = ["stefano.verna@welaika.com", "ju.liu@welaika.com", "davidmassianirennes@gmail.com"]
-  gem.description   = %q{Wordmovemb4 deploys your WordPress websites at the speed of light.}
-  gem.summary       = %q{Wordmovemb4, Capistrano for Wordpress}
+  gem.description   = %q{Wordmovemb deploys your WordPress websites at the speed of light.}
+  gem.summary       = %q{Wordmovemb, Capistrano for Wordpress}
   gem.homepage      = "https://github.com/dmassiani/wordmove"
   gem.license       = "MIT"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "wordmovemb4"
+  gem.name          = "wordmovemb"
   gem.require_paths = ["lib"]
-  gem.version       = Wordmovemb4::VERSION
+  gem.version       = Wordmovemb::VERSION
 
   gem.add_dependency "colored"
   gem.add_dependency "rake"

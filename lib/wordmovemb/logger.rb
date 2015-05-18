@@ -3,7 +3,7 @@
 require 'colored'
 require 'logger'
 
-module Wordmovemb4
+module Wordmovemb
   class Logger < ::Logger
     MAX_LINE = 70
 

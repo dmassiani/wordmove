@@ -1,7 +1,7 @@
-require 'wordmovemb4/deployer/base'
+require 'wordmovemb/deployer/base'
 require 'photocopier/ssh'
 
-module Wordmovemb4
+module Wordmovemb
   module Deployer
     class SSH < Base
       def initialize(environment, options)

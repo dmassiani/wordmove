@@ -1,13 +1,13 @@
 require 'active_support'
 require 'active_support/core_ext'
-require 'wordmovemb4/core_ext'
-require 'wordmovemb4/logger'
-require 'wordmovemb4/wordpress_directory'
-require 'wordmovemb4/sql_adapter'
+require 'wordmovemb/core_ext'
+require 'wordmovemb/logger'
+require 'wordmovemb/wordpress_directory'
+require 'wordmovemb/sql_adapter'
 require 'escape'
 require 'yaml'
 
-module Wordmovemb4
+module Wordmovemb
   module Deployer
 
     class Base
@@ -27,10 +27,10 @@ module Wordmovemb4
           environment = (options[:environment] || available_enviroments.first).to_sym
 
           if options[environment][:ftp]
-            require 'wordmovemb4/deployer/ftp'
+            require 'wordmovemb/deployer/ftp'
             FTP.new(environment, options)
           elsif options[environment][:ssh]
-            require 'wordmovemb4/deployer/ssh'
+            require 'wordmovemb/deployer/ssh'
             SSH.new(environment, options)
           else
             raise StandardError, "No valid adapter found."
