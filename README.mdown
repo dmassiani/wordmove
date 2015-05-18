@@ -1,5 +1,7 @@
 # Wordmovemb
 
+Wordmovemb is a fork of wordmove using with VVV when remote hosting are on MYSQL < 5.5
+
 Wordmovemb is a nice little gem that lets you automatically mirror local Wordpress
 installations and DB data back and forth from your local development machine to
 the remote staging server. SSH and FTP connections are both supported.
