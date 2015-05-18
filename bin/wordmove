@@ -2,5 +2,5 @@
 
 $:.unshift File.join(File.dirname(__FILE__), "../lib")
 
-require 'wordmove/cli'
-Wordmove::CLI.start
+require 'wordmovemb4/cli'
+Wordmovemb4::CLI.start

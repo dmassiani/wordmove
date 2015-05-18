@@ -1,10 +1,10 @@
 require 'spec_helper'
-require 'wordmove/generators/movefile'
+require 'wordmovemb4/generators/movefile'
 
-describe Wordmove::Generators::Movefile do
+describe Wordmovemb4::Generators::Movefile do
 
   let(:movefile) { 'Movefile' }
-  let(:tmpdir) { "/tmp/wordmove" }
+  let(:tmpdir) { "/tmp/wordmovemb4" }
 
   before do
     @pwd = Dir.pwd
@@ -19,7 +19,7 @@ describe Wordmove::Generators::Movefile do
 
   context "::start" do
     before do
-      capture(:stdout) { Wordmove::Generators::Movefile.start }
+      capture(:stdout) { Wordmovemb4::Generators::Movefile.start }
     end
 
     it 'creates a Movefile' do
@@ -45,7 +45,7 @@ describe Wordmove::Generators::Movefile do
 
     before do
       FileUtils.cp(wp_config, ".")
-      capture(:stdout) { Wordmove::Generators::Movefile.start }
+      capture(:stdout) { Wordmovemb4::Generators::Movefile.start }
     end
 
     it 'fills database configuration from wp-config' do

@@ -1,4 +1,4 @@
-module Wordmove
+module Wordmovemb4
   class SqlAdapter
     attr_accessor :sql_content
     attr_reader :sql_path, :source_config, :dest_config

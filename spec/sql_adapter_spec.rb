@@ -1,13 +1,13 @@
-require 'wordmove/sql_adapter'
+require 'wordmovemb4/sql_adapter'
 require 'tempfile'
 
-describe Wordmove::SqlAdapter do
+describe Wordmovemb4::SqlAdapter do
 
   let(:sql_path) { double }
   let(:source_config) { double }
   let(:dest_config) { double }
   let(:adapter) {
-    Wordmove::SqlAdapter.new(
+    Wordmovemb4::SqlAdapter.new(
       sql_path,
       source_config,
       dest_config

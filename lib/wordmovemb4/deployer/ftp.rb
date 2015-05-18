@@ -1,9 +1,9 @@
-require 'wordmove/deployer/base'
+require 'wordmovemb4/deployer/base'
 require 'photocopier/ftp'
 require 'erb'
 require 'open-uri'
 
-module Wordmove
+module Wordmovemb4
   module Deployer
     class FTP < Base
 
