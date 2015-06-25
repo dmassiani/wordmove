@@ -98,6 +98,8 @@ module Wordmove
           local_path = send("local_#{task}_dir").path
           remote_path = send("remote_#{task}_dir").path
           remote_put_directory(local_path, remote_path, paths_to_exclude)
+          command_after = remote_options[:after]
+          run "#{command_after}"
         end
 
         define_method "pull_#{task}" do
@@ -121,7 +123,6 @@ module Wordmove
         exclude_paths = paths_to_exclude.push(exclude_wp_content)
 
         remote_put_directory(local_path, remote_path, exclude_paths)
-        run "say '124 deployer base rb'"
       end
 
       def pull_wordpress
