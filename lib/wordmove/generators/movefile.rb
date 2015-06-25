@@ -1,7 +1,7 @@
 require 'thor/group'
-require 'wordmovemb/generators/movefile_adapter'
+require 'wordmove/generators/movefile_adapter'
 
-module Wordmovemb
+module Wordmove
   module Generators
     class Movefile < Thor::Group
       include Thor::Actions

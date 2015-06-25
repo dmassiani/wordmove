@@ -1,11 +1,11 @@
-require 'wordmovemb/deployer/base'
+require 'wordmove/deployer/base'
 require 'tempfile'
 
-describe Wordmovemb::Deployer::Base do
-  let(:klass) { Wordmovemb::Deployer::Base }
+describe Wordmove::Deployer::Base do
+  let(:klass) { Wordmove::Deployer::Base }
 
   context "::fetch_movefile" do
-    TMPDIR = "/tmp/wordmovemb"
+    TMPDIR = "/tmp/wordmove"
 
     let(:path) { File.join(TMPDIR, 'Movefile') }
     let(:yaml) { "name: Waldo\njob: Hider" }

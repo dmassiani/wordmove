@@ -1,13 +1,13 @@
 require 'thor'
-require 'wordmovemb/generators/movefile'
-require 'wordmovemb/deployer/base'
+require 'wordmove/generators/movefile'
+require 'wordmove/deployer/base'
 
-module Wordmovemb
+module Wordmove
   class CLI < Thor
 
     desc "init", "Generates a brand new Movefile"
     def init
-      Wordmovemb::Generators::Movefile.start
+      Wordmove::Generators::Movefile.start
     end
 
     shared_options = {
@@ -42,7 +42,7 @@ module Wordmovemb
       method_option option, args
     end
     def pull
-      deployer = Wordmovemb::Deployer::Base.deployer_for(options)
+      deployer = Wordmove::Deployer::Base.deployer_for(options)
       handle_options(options) do |task|
         deployer.send("pull_#{task}")
       end
@@ -53,7 +53,7 @@ module Wordmovemb
       method_option option, args
     end
     def push
-      deployer = Wordmovemb::Deployer::Base.deployer_for(options)
+      deployer = Wordmove::Deployer::Base.deployer_for(options)
       handle_options(options) do |task|
         deployer.send("push_#{task}")
       end

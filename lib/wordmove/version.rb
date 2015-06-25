@@ -1,4 +1,4 @@
-module Wordmovemb
+module Wordmove
   VERSION = "1.2.0"
 end
 

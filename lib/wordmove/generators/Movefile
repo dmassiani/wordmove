@@ -11,6 +11,7 @@ local:
 staging:
   vhost: "http://example.com"
   wordpress_path: "/var/www/your_site" # use an absolute path here
+  # after: "command"
 
   database:
     name: "database_name"
@@ -18,6 +19,7 @@ staging:
     password: "password"
     host: "host"
     # port: "3308" # Use just in case you have exotic server config
+    # mb4: false # mb4 is new format from mysql. Installed version can be < mb4 and generate errors to adapt
 
   exclude:
     - ".git/"

@@ -1,7 +1,7 @@
 require 'ostruct'
-require 'wordmovemb/wordpress_directory'
+require 'wordmove/wordpress_directory'
 
-module Wordmovemb
+module Wordmove
   module Generators
     module MovefileAdapter
       def wordpress_path

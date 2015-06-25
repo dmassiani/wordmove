@@ -1,13 +1,13 @@
 require 'active_support'
 require 'active_support/core_ext'
-require 'wordmovemb/core_ext'
-require 'wordmovemb/logger'
-require 'wordmovemb/wordpress_directory'
-require 'wordmovemb/sql_adapter'
+require 'wordmove/core_ext'
+require 'wordmove/logger'
+require 'wordmove/wordpress_directory'
+require 'wordmove/sql_adapter'
 require 'escape'
 require 'yaml'
 
-module Wordmovemb
+module Wordmove
   module Deployer
 
     class Base
@@ -27,10 +27,10 @@ module Wordmovemb
           environment = (options[:environment] || available_enviroments.first).to_sym
 
           if options[environment][:ftp]
-            require 'wordmovemb/deployer/ftp'
+            require 'wordmove/deployer/ftp'
             FTP.new(environment, options)
           elsif options[environment][:ssh]
-            require 'wordmovemb/deployer/ssh'
+            require 'wordmove/deployer/ssh'
             SSH.new(environment, options)
           else
             raise StandardError, "No valid adapter found."
@@ -121,6 +121,7 @@ module Wordmovemb
         exclude_paths = paths_to_exclude.push(exclude_wp_content)
 
         remote_put_directory(local_path, remote_path, exclude_paths)
+        run "say '124 deployer base rb'"
       end
 
       def pull_wordpress

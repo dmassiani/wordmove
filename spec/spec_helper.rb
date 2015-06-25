@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 
-require 'wordmovemb' # and any other gems you need
-require 'wordmovemb/logger'
+require 'wordmove' # and any other gems you need
+require 'wordmove/logger'
 require 'active_support/core_ext'
 require 'thor'
 
