@@ -63,6 +63,7 @@ local:
 staging:
   vhost: "http://example.com"
   wordpress_path: "/var/www/your_site" # use an absolute path here
+  # after: "say 'hi'" # or "curl --data 'Database pushed on staging' $'https://pseudo.slack.com/services/hooks/slackbot?token=SOMETHING&channel=%23general'
 
   database:
     name: "database_name"
